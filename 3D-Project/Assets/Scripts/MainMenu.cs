@@ -2,26 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    void Start()
+    public GameObject loadingScreen;
+    public Slider sliderprogress;
+
+    public void LoadLevel (int SampleScene)
     {
+        StartCoroutine(LoadAsynchronously(SampleScene));
     }
 
+    IEnumerator LoadAsynchronously (int SampleScene)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SampleScene);
+        loadingScreen.SetActive(true);
 
-    public void SwitchScene(string SampleScene)
-{
-        SceneManager.LoadScene("SampleScene");
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress);
+            Debug.Log(operation.progress);
+            sliderprogress.value = progress;
+            yield return null;
+        }
     }
+   
+
     public void quitgame()
     {
         Application.Quit();
         Debug.Log("Quit");
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         

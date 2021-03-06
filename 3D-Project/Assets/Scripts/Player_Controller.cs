@@ -17,20 +17,25 @@ public class Player_Controller : MonoBehaviour
    void Update()
    {
        Move();
-       Rotate();
-   }
+        if (Input.GetMouseButton(1))
+        {
+            Rotate();
+        }
+    }
 public void Rotate()
 {
     float horizontalRotation = Input.GetAxis("Mouse X");
     float verticalRotation = Input.GetAxis("Mouse Y");
 
-    transform.Rotate(0, horizontalRotation * mouseSensitivity, 0);
-    cameraHolder.Rotate(-verticalRotation*mouseSensitivity,0,0);
+       
+            transform.Rotate(0, horizontalRotation * mouseSensitivity, 0);
+            cameraHolder.Rotate(-verticalRotation * mouseSensitivity, 0, 0);
 
-    Vector3 currentRotation = cameraHolder.localEulerAngles;
-    if (currentRotation.x > 180) currentRotation.x -= 360;
-    currentRotation.x = Mathf.Clamp(currentRotation.x, upLimit, downLimit);
-    cameraHolder.localRotation = Quaternion.Euler(currentRotation);
+            Vector3 currentRotation = cameraHolder.localEulerAngles;
+            if (currentRotation.x > 180) currentRotation.x -= 360;
+            currentRotation.x = Mathf.Clamp(currentRotation.x, upLimit, downLimit);
+            cameraHolder.localRotation = Quaternion.Euler(currentRotation);
+        
 }
 
    private void Move()

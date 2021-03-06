@@ -435,7 +435,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-12294
+  m_Name: pb_Mesh13718
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -827,9 +827,10 @@ GameObject:
   - component: {fileID: 808858918}
   - component: {fileID: 808858917}
   - component: {fileID: 808858916}
+  - component: {fileID: 808858921}
   m_Layer: 0
   m_Name: Chest
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1117,13 +1118,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808858915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.468956, y: 0.03, z: 8.191044}
+  m_LocalPosition: {x: -3.468956, y: 0.03, z: 8.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 921090415}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &808858921
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808858915}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1, z: 1.5}
+  m_Center: {x: 1, y: 0.5, z: -0.5}
 --- !u!1 &921090414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,9 +1151,11 @@ GameObject:
   - component: {fileID: 921090418}
   - component: {fileID: 921090417}
   - component: {fileID: 921090416}
+  - component: {fileID: 921090420}
+  - component: {fileID: 921090421}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Lid
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1152,7 +1168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921090414}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.948, z: 0.012956619}
+  m_LocalPosition: {x: 0, y: 0.948, z: 0.001}
   m_LocalScale: {x: 1, y: 0.66559, z: 1}
   m_Children:
   - {fileID: 1140326761}
@@ -1435,13 +1451,44 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921090414}
   m_Mesh: {fileID: 1744065854}
+--- !u!95 &921090420
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921090414}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d99bb69bad18a6940b244bc6e2df2188, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &921090421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921090414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3282e0b29e34d9a4694a3f01b562b7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &932354544
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-23872
+  m_Name: pb_Mesh13684
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1604,7 +1651,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-14362
+  m_Name: pb_Mesh13754
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2904,7 +2951,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-12950
+  m_Name: pb_Mesh13730
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3074,7 +3121,7 @@ GameObject:
   - component: {fileID: 2136678273}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

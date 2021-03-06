@@ -6,7 +6,16 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
- public void LoadScene(string LoadingScene)
+   public Image whiteFade;
+
+void Start()
+    {
+        whiteFade.canvasRenderer.SetAlpha(1.0f);
+        fadeIn();
+    }
+
+
+    public void LoadScene(string LoadingScene)
     {
         SceneManager.LoadScene("LoadingScene");
     }
@@ -14,6 +23,8 @@ public class MainMenu : MonoBehaviour
 public void LoadMenu (string MainMenu)
 {
         SceneManager.LoadScene("MainMenu");
+        whiteFade.canvasRenderer.SetAlpha(1.0f);
+        fadeIn();
     }
 
     public void quitgame()
@@ -22,7 +33,8 @@ public void LoadMenu (string MainMenu)
         Debug.Log("Quit");
     }
 
-    void Update()
+    void fadeIn()
     {
+        whiteFade.CrossFadeAlpha(0, 2, false);
     }
 }

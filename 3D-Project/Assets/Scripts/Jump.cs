@@ -5,7 +5,7 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
     Rigidbody rb;
-  [SerializeField]  float jumpForce;
+  [SerializeField]  float jumpForce = 500;
  [SerializeField] Transform groundChecker;
 [SerializeField] float checkRadius;
 [SerializeField] LayerMask groundLayer;

@@ -6,19 +6,32 @@ public class ChestController : MonoBehaviour
 {
     Animator anim;
     private bool isOpen;
+    private bool isNear;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        isNear = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.M))
+        if (isNear == true)
         {
-            Pressed();
-            Debug.Log("Open Saysame");
+
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                Pressed();
+                Debug.Log("Open Saysame");
+            }
+        }
+    }
+    void OnTriggerEnter(Collider col)
+    {
+        if(col.gameObject.tag == "Player")
+        {
+            isNear = true;
         }
     }
 

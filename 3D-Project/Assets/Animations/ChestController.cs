@@ -6,7 +6,7 @@ public class ChestController : MonoBehaviour
 {
     Animator anim;
     private bool isOpen;
-    private bool isNear;
+    public bool isNear;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +26,24 @@ public class ChestController : MonoBehaviour
                 Debug.Log("Open Saysame");
             }
         }
+        else
+        {
+            isNear = false;
+        }
     }
     void OnTriggerEnter(Collider col)
     {
         if(col.gameObject.tag == "Player")
         {
             isNear = true;
+        }
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        if(collider.gameObject.tag == "Player")
+        {
+            isNear = false;
         }
     }
 

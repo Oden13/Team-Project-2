@@ -24,10 +24,10 @@ public class Enemy_Chase : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        transform.LookAt(playerDistance);
-    }
+   // void FixedUpdate()
+    //{
+      //  transform.LookAt(playerDistance);
+    //}
 
     void OnTriggerEnter(Collider other)
     {

@@ -6,10 +6,26 @@ public class Enemy_Chase : MonoBehaviour
 {
  public int speed;
     public GameObject player;
+    public float range;
+    public Transform playerDistance;
+
    
-    void Update () {
+    void Update () 
+    {
+        if(Vector3.Distance(playerDistance.position,transform.position) <= range)
+        {
         Vector3 localPosition = player.transform.position - transform.position;
         localPosition = localPosition.normalized; // The normalized direction in LOCAL space
-        transform.Translate(localPosition.x * Time.deltaTime * speed, localPosition.y * Time.deltaTime * speed, localPosition.z * Time.deltaTime * speed);
+        transform.Translate(localPosition.x * Time.deltaTime * speed, 0, localPosition.z * Time.deltaTime * speed);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+     
+        if (other.gameObject.CompareTag("fireball"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

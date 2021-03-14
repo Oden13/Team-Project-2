@@ -16,6 +16,16 @@ public class ThirdPersonMovementScript : MonoBehaviour
    public LayerMask groundMask;
    bool isGrounded;
    public float jumpHeight = 3f;
+   public float slideLength;
+    public float slideVelocity;
+    public float slideHeight;
+    private bool isSliding;
+    private float originalHeight;
+
+    void Start()
+    {
+        originalHeight = controller.height;
+    }
 
     // Update is called once per frame
     void Update()
@@ -44,5 +54,18 @@ if(Input.GetButtonDown("Jump") && isGrounded)
         }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+        if (isGrounded && Input.GetKeyDown("x"))
+        {
+                controller.height = slideHeight;
+                //float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+                //Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                //controller.Move(moveDir.normalized * slideVelocity);   
+        }
+        if (Input.GetKeyUp("x"))
+        {
+            controller.height = originalHeight;
+        }
+
+        
     }
 }

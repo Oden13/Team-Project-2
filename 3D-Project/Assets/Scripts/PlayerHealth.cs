@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     public int health;
-    public int damage;
     private float timeBtwDamage;
     public Slider healthBar;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        health = 10;
     }
 
     // Update is called once per frame
@@ -23,5 +23,28 @@ public class PlayerHealth : MonoBehaviour
             timeBtwDamage -= Time.deltaTime;
         }
         healthBar.value = health;
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            health = health - 1;
+            Debug.Log("Hi there");
+        }
+        if (health == 0)
+        {
+            Destroy(this.gameObject);
+            //Instantiate(deathEffect, transform.position, Quaternion.identity);
+            healthBar.value = 0;
+        }
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "Enemy")
+        {
+            health = health - 1;
+        }
     }
 }

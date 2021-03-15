@@ -38833,7 +38833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  lifeTime: 0.5
+  lifeTime: 1
   rb: {fileID: 6956614609673276770}
 --- !u!54 &6956614609673276770
 Rigidbody:

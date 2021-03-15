@@ -108,13 +108,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 3.65
+  m_Height: 3.84
   m_Radius: 0.54
   m_SlopeLimit: 45
   m_StepOffset: 0.7
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: -0.58, y: -1.61, z: -0.44}
+  m_Center: {x: -0.21, y: -1.75, z: -0.67}
 --- !u!114 &1088026449890848048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +138,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   jumpHeight: 5
+  slideLength: 0
+  slideVelocity: 0
+  slideHeight: 0
 --- !u!114 &984984096
 MonoBehaviour:
   m_ObjectHideFlags: 0

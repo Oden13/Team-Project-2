@@ -7,6 +7,9 @@ public class ChestController : MonoBehaviour
     Animator anim;
     private bool isOpen;
     public bool isNear;
+    public Transform itemSpawner;
+    public GameObject treasure;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,10 +54,12 @@ public class ChestController : MonoBehaviour
     {
  
                 //This will set the bool the opposite of what it is.
-                isOpen = !isOpen;
-                
- 
-                //This line will set the bool true so it will play the animation.
-                anim.SetBool("isOpen", !isOpen);
+        isOpen = !isOpen;
+        Instantiate(treasure, itemSpawner.position, transform.rotation);
+
+
+        //This line will set the bool true so it will play the animation.
+        //anim.SetBool("isOpen", !isOpen);
+        anim.SetBool("isOpen",true);
     }
 }

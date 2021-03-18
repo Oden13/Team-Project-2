@@ -51,6 +51,17 @@ public class player_animator_script : MonoBehaviour
        {
            animator.SetBool("IsAttacking", false);
        }
+ if (Input.GetKeyDown ("x"))
+       {
+           animator.SetBool("IsCrouching", true);
+
+       }
+
+       if (Input.GetKeyUp ("x"))
+       {
+           animator.SetBool("IsCrouching", false);
+
+       }
 
     }
 }

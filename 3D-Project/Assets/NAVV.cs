@@ -10,10 +10,14 @@ public class NAVV : MonoBehaviour
     public float range;
     public Transform playerDistance;
 
+     private Animator animator = null;
+
     // Start is called before the first frame update
     void Start()
     {
         nav = GetComponent<NavMeshAgent>();
+
+          animator = GetComponent<Animator>();  
     }
 
     // Update is called once per frame
@@ -22,6 +26,8 @@ public class NAVV : MonoBehaviour
         if (Vector3.Distance(playerDistance.position, transform.position) <= range)
         {
             nav.SetDestination(target.position);
+
+             animator.SetBool("IsWalking", true);
         }
             
     }

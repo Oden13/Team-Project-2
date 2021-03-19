@@ -10,6 +10,8 @@ TagManager:
   - Ground
   - Enemy
   - DeathPlane
+  - Tome
+  - Exit
   layers:
   - Default
   - TransparentFX

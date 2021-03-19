@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 780dbe6ececf7c74fb89b42ea053eb57
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Antique Quest St
+  fontNames:
+  - Antique Quest St
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c035a20b754cfb74c82227af4cfe17d6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

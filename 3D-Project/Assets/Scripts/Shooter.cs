@@ -9,7 +9,8 @@ public class Shooter : MonoBehaviour
     private Vector3 destination;
     public Transform firePoint;
     public float projectileSpeed;
-
+    public AudioClip shooting;
+    public AudioSource shootingSound;
     public float shootForce;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,8 @@ public class Shooter : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             FireProjectile();
+            shootingSound.clip = shooting;
+            shootingSound.Play();
         }
     }
     void FireProjectile()

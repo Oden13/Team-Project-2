@@ -21,6 +21,10 @@ public class ThirdPersonMovementScript : MonoBehaviour
     public float slideHeight;
     private bool isSliding;
     private float originalHeight;
+    public AudioClip jump;
+    public AudioSource Sound;
+
+   
 
     void Start()
     {
@@ -38,7 +42,11 @@ if (isGrounded && velocity.y <0)
 if(Input.GetButtonDown("Jump") && isGrounded)
 {
     velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+     Sound.clip = jump;
+     Sound.Play();
 }
+
+
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -65,7 +73,5 @@ if(Input.GetButtonDown("Jump") && isGrounded)
         {
             controller.height = originalHeight;
         }
-
-        
     }
 }

@@ -10,6 +10,9 @@ public class Jump : MonoBehaviour
 [SerializeField] float checkRadius;
 [SerializeField] LayerMask groundLayer;
 
+    public AudioClip jump;
+    public AudioSource jumping;
+
     void Start()
     {
        rb = GetComponent<Rigidbody>(); 

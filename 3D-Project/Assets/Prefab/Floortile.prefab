@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4816156296601903412
 Transform:
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d9c40b094ea95274682e1db48d4d4527, type: 2}
+  - {fileID: 2100000, guid: 0a8c0f091da1de749b51a18da791305e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -104,12 +104,12 @@ GameObject:
   - component: {fileID: 2364902926374947339}
   - component: {fileID: 6737283787918830107}
   - component: {fileID: 9190886053591128003}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floortile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6174937812369776411
 Transform:

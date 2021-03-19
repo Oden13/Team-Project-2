@@ -50,4 +50,5 @@ public void Rotate()
        characterController.Move(speed * Time.deltaTime * move);
    }
 
+
 }

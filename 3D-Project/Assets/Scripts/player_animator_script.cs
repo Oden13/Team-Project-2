@@ -17,22 +17,16 @@ public class player_animator_script : MonoBehaviour
         
 
 
-        if (Input.GetButtonDown("Horizontal"))
+        if (Input.GetButton("Horizontal"))
         {
             animator.SetBool("IsMoving", true);
         }
- else if (Input.GetButtonDown("Vertical"))
+  if (Input.GetButton("Vertical"))
         {
             animator.SetBool("IsMoving", true);
         }
-        else if (Input.GetButtonUp("Horizontal"))
-        {
-            animator.SetBool("IsMoving", false);
-        }
-         else if (Input.GetButtonUp("Vertical"))
-        {
-            animator.SetBool("IsMoving", false);
-        }
+        else{animator.SetBool("IsMoving", false);}
+ 
        
        if (Input.GetKeyDown (KeyCode.Space))
        {

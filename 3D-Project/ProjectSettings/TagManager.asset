@@ -9,6 +9,7 @@ TagManager:
   - fireball
   - Ground
   - Enemy
+  - DeathPlane
   layers:
   - Default
   - TransparentFX

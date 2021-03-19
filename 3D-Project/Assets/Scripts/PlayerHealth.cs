@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -45,6 +46,10 @@ public class PlayerHealth : MonoBehaviour
         if (collider.gameObject.tag == "Enemy")
         {
             health = health - 1;
+        }
+        if (collider.gameObject.tag == "DeathPlane")
+        {
+            SceneManager.LoadScene("LoseScreen");
         }
     }
 }

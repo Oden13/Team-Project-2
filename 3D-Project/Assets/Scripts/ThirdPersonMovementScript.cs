@@ -22,7 +22,9 @@ public class ThirdPersonMovementScript : MonoBehaviour
     private bool isSliding;
     private float originalHeight;
     public AudioClip jump;
+    public AudioClip run;
     public AudioSource Sound;
+    private bool isRuning;
 
    
 
@@ -42,9 +44,16 @@ if (isGrounded && velocity.y <0)
 if(Input.GetButtonDown("Jump") && isGrounded)
 {
     velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-     Sound.clip = jump;
-     Sound.Play();
-}
+    Sound.clip = jump;
+    Sound.Play();
+
+        }
+        //if (!isGrounded)
+        //{
+        //  Sound.clip = jump;
+        //  Sound.Play();
+        //  Sound.Stop();
+        // }
 
 
 
@@ -59,6 +68,7 @@ if(Input.GetButtonDown("Jump") && isGrounded)
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
+
         }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
@@ -73,5 +83,28 @@ if(Input.GetButtonDown("Jump") && isGrounded)
         {
             controller.height = originalHeight;
         }
+       
     }
+
+   // void FixedUpdate()
+   // {
+        //if (Input.GetKeyDown("space"))
+        //{
+          //Sound.clip = jump;
+          // Sound.Play();
+       // }
+        //if (Input.GetKeyUp("space"))
+        //{ 
+          //  Sound.loop = false;
+        //}
+        //if (Input.GetKeyDown("w") && !Sound.isPlaying)
+       // {
+
+          // Sound.clip = run;
+          //  Sound.Play();
+           // Sound.loop = true;
+       // 
+        //}
+
+    //}
 }

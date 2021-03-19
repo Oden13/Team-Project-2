@@ -26,17 +26,15 @@ public class player_animator_script : MonoBehaviour
             animator.SetBool("IsMoving", true);
         }
         else{animator.SetBool("IsMoving", false);}
- 
-       
-       if (Input.GetKeyDown (KeyCode.Space))
-       {
-           animator.SetBool("IsJumping", true);
 
-       }
-        if (Input.GetKeyUp (KeyCode.Space))
-       {
-           animator.SetBool("IsJumping", false);
-       }
+
+        
+        if (Input.GetKey(KeyCode.Space))
+        {
+            animator.SetBool("IsJumping", true);
+        }
+        else{animator.SetBool("IsJumping", false);}
+
        if(Input.GetButtonDown("Fire1"))
        {
            animator.SetBool("IsAttacking", true);

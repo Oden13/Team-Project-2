@@ -12,7 +12,12 @@ ModelImporter:
   - first:
       74: 1402212129770763005
     second: ATK
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3
+    second: {fileID: 2100000, guid: b00da62543ea0224985b7695ec798387, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

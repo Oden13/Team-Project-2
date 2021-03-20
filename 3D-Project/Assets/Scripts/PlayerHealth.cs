@@ -24,6 +24,10 @@ public class PlayerHealth : MonoBehaviour
             timeBtwDamage -= Time.deltaTime;
         }
         healthBar.value = health;
+        if (health == 0)
+        {
+            Death();
+        }
     }
 
     void OnCollisionEnter(Collision col)
@@ -36,8 +40,8 @@ public class PlayerHealth : MonoBehaviour
         if (health == 0)
         {
             Destroy(this.gameObject);
-            //Instantiate(deathEffect, transform.position, Quaternion.identity);
             healthBar.value = 0;
+            //SceneManager.LoadScene("LoseScreen");
         }
     }
 
@@ -51,5 +55,9 @@ public class PlayerHealth : MonoBehaviour
         {
             SceneManager.LoadScene("LoseScreen");
         }
+    }
+    void Death()
+    {
+        SceneManager.LoadScene("LoseScreen");
     }
 }

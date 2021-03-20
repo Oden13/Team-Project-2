@@ -2120,7 +2120,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140.74854, y: 335}
+  m_AnchoredPosition: {x: 159, y: 327}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1080396500
@@ -2143,7 +2143,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 45
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -2154,7 +2154,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "W or \u2191\n\nA or \u2190\n\nS or \u2193\n\nD or \u2192\n\nP\n\nX\n\nC\n\nM\n"
+  m_Text: "W or \u2191\n\nA or \u2190\n\nS or \u2193\n\nD or \u2192\n\nSpace\n\nP\n\nX\n\nC\n\nM\n"
 --- !u!222 &1080396501
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2406,7 +2406,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 45
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -2427,6 +2427,9 @@ MonoBehaviour:
 
 
     Move Right
+
+
+    Jump
 
 
     Pause Game

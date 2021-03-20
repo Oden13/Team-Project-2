@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1529275450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1529275451}
+  - component: {fileID: 1529275452}
+  m_Layer: 0
+  m_Name: HitBox
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1529275451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529275450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 363070891996604200}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1529275452
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529275450}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.46697107, y: 0.4204723, z: 0.2698799}
+  m_Center: {x: -0.0005066224, y: 0.4323736, z: 0.02863385}
 --- !u!65 &1123252309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13,24 +57,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.46286663, y: 0.5392023, z: 0.19420506}
   m_Center: {x: 0.0016185385, y: 0.38827503, z: 0.0029691714}
---- !u!114 &1123252308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3698223670534804795}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9089617bba6a52a4ca6187d37cee88cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  player: {fileID: 0}
-  range: 30
-  playerDistance: {fileID: 0}
-  rock: {fileID: 8300000, guid: 0c54cdc330eb7164595c6a8109cc08ef, type: 3}
-  rockSound: {fileID: 1763784608}
 --- !u!82 &1763784608
 AudioSource:
   m_ObjectHideFlags: 0
@@ -127,6 +153,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1123252308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3698223670534804795}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9089617bba6a52a4ca6187d37cee88cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  player: {fileID: 0}
+  range: 30
+  playerDistance: {fileID: 0}
+  rock: {fileID: 8300000, guid: 0c54cdc330eb7164595c6a8109cc08ef, type: 3}
+  rockSound: {fileID: 1763784608}
 --- !u!114 &1763784602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,17 +223,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 1affad42b6c42d547977cb3e169e06a9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -773.6
+      value: -728.41
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1affad42b6c42d547977cb3e169e06a9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 403
+      value: 405.37
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1affad42b6c42d547977cb3e169e06a9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -265.06
+      value: -261.95
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1affad42b6c42d547977cb3e169e06a9,
         type: 3}
@@ -249,7 +293,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 1affad42b6c42d547977cb3e169e06a9,
         type: 3}
       propertyPath: m_Name
-      value: Enemy_Walk
+      value: Enemy_Walk Variant
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 1affad42b6c42d547977cb3e169e06a9,
         type: 3}
@@ -306,6 +350,12 @@ PrefabInstance:
 --- !u!1 &3698223670534804795 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 1affad42b6c42d547977cb3e169e06a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 4644152139942480946}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &363070891996604200 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 1affad42b6c42d547977cb3e169e06a9,
     type: 3}
   m_PrefabInstance: {fileID: 4644152139942480946}
   m_PrefabAsset: {fileID: 0}

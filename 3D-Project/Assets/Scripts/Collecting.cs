@@ -10,7 +10,10 @@ public class Collecting : MonoBehaviour
     public Text tomeCounting;
     public Text exitHint;
     private int tomeNumber = 0;
-   // [SerializeField] private string WinScreen;
+
+    public AudioClip book;
+    public AudioSource bookSound;
+    // [SerializeField] private string WinScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,8 @@ public class Collecting : MonoBehaviour
         if (other.gameObject.tag == "Tome")
         {
             tomeNumber = tomeNumber + 1;
+            bookSound.clip = book;
+            bookSound.Play();
             SetCountingText();
             Destroy(other.gameObject,0.2f);
           

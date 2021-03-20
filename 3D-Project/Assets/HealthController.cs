@@ -11,14 +11,14 @@ public class HealthController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = 10;
+        health = 3;
     }
 
     void OnCollisionEnter(Collider col)
     {
         if(col.gameObject.tag == "Enemy")
         {
-            //health = health - 1; 
+            health = health - 1; 
             Debug.Log("Hi There");
         }
     }

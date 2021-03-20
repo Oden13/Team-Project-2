@@ -8,9 +8,12 @@ public class Enemy_Chase : MonoBehaviour
     public GameObject player;
     public float range;
     public Transform playerDistance;
-   
 
-   
+    public AudioClip rock;
+    public AudioSource rockSound;
+
+
+
     void Update () 
     {
         if(Vector3.Distance(playerDistance.position,transform.position) <= range)
@@ -35,7 +38,9 @@ public class Enemy_Chase : MonoBehaviour
      
         if (other.gameObject.CompareTag("fireball"))
         {
-            Destroy(gameObject);
+            rockSound.clip = rock;
+            rockSound.Play();
+            Destroy(gameObject,0.6f);
         }
     }
 }

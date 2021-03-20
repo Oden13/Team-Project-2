@@ -26,7 +26,9 @@ public class ThirdPersonMovementScript : MonoBehaviour
     public AudioSource Sound;
     private bool isRuning;
 
-   
+    public AudioClip Crouch;
+
+
 
     void Start()
     {
@@ -75,6 +77,8 @@ if(Input.GetButtonDown("Jump") && isGrounded)
         if (isGrounded && Input.GetKeyDown("x"))
         {
                 controller.height = slideHeight;
+                Sound.clip = Crouch;
+                Sound.Play();
                 //float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
                 //Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
                 //controller.Move(moveDir.normalized * slideVelocity);   
@@ -82,6 +86,8 @@ if(Input.GetButtonDown("Jump") && isGrounded)
         if (Input.GetKeyUp("x"))
         {
             controller.height = originalHeight;
+            Sound.clip = Crouch;
+            Sound.Play();
         }
        
     }

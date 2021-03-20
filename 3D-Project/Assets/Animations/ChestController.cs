@@ -10,6 +10,10 @@ public class ChestController : MonoBehaviour
     public Transform itemSpawner;
     public GameObject treasure;
 
+    public AudioClip open;
+
+    public AudioSource Opening;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +30,8 @@ public class ChestController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.M))
             {
                 Pressed();
+                Opening.clip = open;
+                Opening.Play();
                 Debug.Log("Open Saysame");
             }
         }

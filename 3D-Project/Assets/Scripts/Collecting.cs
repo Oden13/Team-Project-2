@@ -32,6 +32,7 @@ public class Collecting : MonoBehaviour
     {
         if (other.gameObject.tag == "Tome")
         {
+            Debug.Log ("Got Tome!");
             tomeNumber = tomeNumber + 1;
             bookSound.clip = book;
             bookSound.Play();

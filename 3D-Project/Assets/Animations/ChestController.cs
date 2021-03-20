@@ -67,5 +67,6 @@ public class ChestController : MonoBehaviour
         //This line will set the bool true so it will play the animation.
         //anim.SetBool("isOpen", !isOpen);
         anim.SetBool("isOpen",true);
+        Destroy(this);
     }
 }

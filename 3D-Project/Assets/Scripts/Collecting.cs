@@ -13,6 +13,9 @@ public class Collecting : MonoBehaviour
 
     public AudioClip book;
     public AudioSource bookSound;
+
+    public AudioClip open;
+    public AudioClip locked;
     // [SerializeField] private string WinScreen;
 
     // Start is called before the first frame update
@@ -45,11 +48,15 @@ public class Collecting : MonoBehaviour
         {
             if (tomeNumber == 4)
             {
+                bookSound.clip = open;
+                bookSound.Play();
                 SceneManager.LoadScene("WinScreen");
             }
 
             else
             {
+                bookSound.clip = locked;
+                bookSound.Play();
                 exitHint.text = "Collect all four tomes to exit!";
             }
 

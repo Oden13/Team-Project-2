@@ -10,6 +10,9 @@ public class PlayerHealth : MonoBehaviour
     private float timeBtwDamage;
     public Slider healthBar;
 
+    public AudioClip grunt;
+    public AudioSource grunting;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +37,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
+            grunting.clip = grunt;
+            grunting.Play();
             health = health - 1;
             Debug.Log("Hi there");
         }
@@ -50,10 +55,14 @@ public class PlayerHealth : MonoBehaviour
         if (collider.gameObject.tag == "Enemy")
         {
             health = health - 1;
+            grunting.clip = grunt;
+            grunting.Play();
         }
         if (collider.gameObject.tag == "DeathPlane")
         {
             SceneManager.LoadScene("LoseScreen");
+            grunting.clip = grunt;
+            grunting.Play();
         }
     }
     void Death()
